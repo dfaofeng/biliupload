@@ -41,7 +41,7 @@ type VideosStruct struct {
 	Videos *[]videos `json:"videos"`
 }
 // addVideo 投稿方法
-func (b *BiliBiliVideo) addVideo(s *VideosStruct) []byte {
+func (b *BiliBiliVideo) AddVideo(s *VideosStruct) []byte {
 	//json反序列化
 	post_video,_:=json.Marshal(s)
 	addvideoApi := "http://member.bilibili.com/x/vu/client/add"
