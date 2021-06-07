@@ -1,0 +1,27 @@
+token : "d627a028cd595ed0e14650fabf48e231"
+dirpath : ""
+path : "E://yidong/2021-04-22 01-55-12.mp4"
+#  大号 17a57c23d9b8af8566328615d8733a41
+#  小号 d627a028cd595ed0e14650fabf48e231
+video :
+  #投稿设备类型,默认为1054
+  build : 1054
+  #投稿类型,1为自制,2为转载
+  copyright : 2
+  #投稿封面.url地址,默认为空,代表封面为视频第一帧
+  cover :
+  #稿件简介
+  desc : "live.bilibili.com"
+  #视频是否禁止转载标志0无1禁止
+  noreprint : 0
+  #是否开启充电面板，0为关闭1为开启
+  openelec : 0
+  #转载投稿需要,转载来源
+  source : "live.bilibili.com"
+  #视频tag标签
+  tag : "直播录像"
+  #分区id,详细请参考
+  #https://github.com/FortuneDayssss/BilibiliUploader/wiki/Bilibili%E5%88%86%E5%8C%BA%E5%88%97%E8%A1%A8
+  tid : 21
+  #稿件主标题
+  title : "日常录屏"
