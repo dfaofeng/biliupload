@@ -21,7 +21,7 @@ type uploadInfo struct {
 	URL string `json:"url"`
 }
 //主上传方法
-func (b *BiliBiliVideo) uploadMain(videoList []map[string]string) *[]videos{
+func (b *BiliBiliVideo) UploadMain(videoList []map[string]string) *[]videos{
 	//遍历传递进来的视频列表
 	for i, m := range videoList {
 		log.Println(i, m["path"])
