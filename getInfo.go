@@ -1,4 +1,4 @@
-package BiliBiliUploadv2
+package biliupload
 
 import (
 	"encoding/json"
