@@ -55,7 +55,7 @@ func InitMap(path,title, desc string) map[string]string {
 	return v
 }
 // getUserInfo 获取用户信息方法
-func (b *BiliBiliVideo) getUserInfo()  {
+func (b *BiliBiliVideo) GetUserInfo()  {
 	user :="https://passport.bilibili.com/api/oauth2/info?"
 	login_params :="access_token="+b.AccessToken+"&appkey=aae92bc66f3edfab&platform=pc&ts="+strconv.Itoa(int(time.Now().Unix()))
 	sign :=GetSign([]byte (login_params+"af125a0d5279fd576c1b4418a3e8276d"))
