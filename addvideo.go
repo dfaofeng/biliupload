@@ -40,7 +40,7 @@ type VideosStruct struct {
 	//上传结构体
 	Videos *[]videos `json:"videos"`
 }
-// addVideo 投稿方法
+// AddVideo 投稿方法
 func (b *BiliBiliVideo) AddVideo(s *VideosStruct) []byte {
 	//json反序列化
 	post_video,_:=json.Marshal(s)

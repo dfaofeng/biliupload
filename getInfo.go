@@ -8,11 +8,8 @@ import (
 	"time"
 )
 
-// 分片数量
 var (
 	Size float64 = 2 * 1024 * 1024
-	Video = make([]map[string]string,0)
-	v = make([]videos,0)
 )
 // BiliBiliVideo AccessToken结构体
 type BiliBiliVideo struct {
@@ -54,7 +51,7 @@ func InitMap(path,title, desc string) map[string]string {
 	v["desc"]=desc
 	return v
 }
-// getUserInfo 获取用户信息方法
+// GetUserInfo 获取用户信息方法
 func (b *BiliBiliVideo) GetUserInfo()  {
 	user :="https://passport.bilibili.com/api/oauth2/info?"
 	login_params :="access_token="+b.AccessToken+"&appkey=aae92bc66f3edfab&platform=pc&ts="+strconv.Itoa(int(time.Now().Unix()))

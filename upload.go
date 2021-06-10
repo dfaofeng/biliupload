@@ -20,9 +20,11 @@ type uploadInfo struct {
 	OK int `json:"OK"`
 	URL string `json:"url"`
 }
-//主上传方法
+
+// UploadMain 主上传方法
 func (b *BiliBiliVideo) UploadMain(videoList []map[string]string) *[]videos{
 	//遍历传递进来的视频列表
+	v :=make([]videos,0)
 	for i, m := range videoList {
 		log.Println(i, m["path"])
 		//请求上传地址
@@ -33,8 +35,6 @@ func (b *BiliBiliVideo) UploadMain(videoList []map[string]string) *[]videos{
 			os.Exit(1)
 			return nil
 		}
-		// 最后关闭文件
-		defer file.Close()
 		fi, _ := file.Stat()
 		//读文件大小
 		file_size := fi.Size()
@@ -70,12 +70,15 @@ func (b *BiliBiliVideo) UploadMain(videoList []map[string]string) *[]videos{
 		content, _ := ioutil.ReadAll(resp.Body)
 		log.Println("保存视频返回数据:",string(content))
 		resp.Body.Close()
+		//单稿件信息
 		a :=videos{
 			Desc:     m["desc"],
 			Filename: b.uploadInfo.Filename,
 			Title:    m["title"],
 		}
-		v = append(v, a)
+		v = append(v,a)
+		// 最后关闭文件
+		defer file.Close()
 	}
 	return &v
 }

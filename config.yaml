@@ -1,8 +1,8 @@
 token : "1"
 dirpath : ""
 path : "E://yidong/2021-04-22 01-55-12.mp4"
-#  大号 17a57c23d9b8af8566328615d8733a41
-#  小号 d627a028cd595ed0e14650fabf48e231
+#  大号 
+#  小号 
 video :
   #投稿设备类型,默认为1054
   build : 1054
